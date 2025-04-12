@@ -1,0 +1,153 @@
+[gd_scene load_steps=2 format=3 uid="uid://byu5eb5dofhdo"]
+
+[ext_resource type="Script" uid="uid://c36htscfwwt15" path="res://subtraction.gd" id="1_wa3qb"]
+
+[node name="Subtraction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wa3qb")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.955559, 0.937301, 0.898201, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.236111
+anchor_top = 0.037037
+anchor_right = 0.763889
+anchor_bottom = 0.393519
+offset_bottom = -182.0
+text = "घटाव क्रम जोड़ने का विपरीत है। ऊपर जाने के बजाय, आप नीचे जाते हैं।
+
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+
+यदि आप पर्याप्त मात्रा में घटाते हैं, तो आप नकारात्मक संख्याएं भी प्राप्त कर सकते हैं।
+
+-1, -2, -3, -4, -5, -6, -7, -8, -9, -10
+
+नीचे इसका प्रयास करें!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Box1" type="TextEdit" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.388889
+anchor_top = 0.691358
+anchor_right = 0.444444
+anchor_bottom = 0.790123
+offset_left = -32.0
+offset_top = -120.0
+offset_right = -32.0
+offset_bottom = -120.0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Minus" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416667
+anchor_top = 0.506173
+anchor_right = 0.472222
+anchor_bottom = 0.604938
+theme_override_font_sizes/font_size = 40
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Box2" type="TextEdit" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.691358
+anchor_right = 0.555556
+anchor_bottom = 0.790123
+offset_left = -32.0
+offset_top = -120.0
+offset_right = -32.0
+offset_bottom = -120.0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Equals" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 608.0
+offset_top = 328.0
+offset_right = 672.0
+offset_bottom = 392.0
+theme_override_font_sizes/font_size = 40
+text = "="
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Result" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 672.0
+offset_top = 328.0
+offset_right = 736.0
+offset_bottom = 392.0
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Subtract" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.361111
+anchor_top = 0.641975
+anchor_right = 0.638889
+anchor_bottom = 0.703704
+offset_top = 3.05176e-05
+text = "घटाना"
+metadata/_edit_use_anchors_ = true
+
+[node name="Reset" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4375
+anchor_top = 0.716049
+anchor_right = 0.5625
+anchor_bottom = 0.777778
+text = "रीसेट करें"
+metadata/_edit_use_anchors_ = true
+
+[node name="NextPage" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.861111
+anchor_top = 0.91358
+anchor_right = 0.986111
+anchor_bottom = 0.975309
+text = "अगली पृष्ठ"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Subtract" to="." method="_on_subtract_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="NextPage" to="." method="_on_next_page_pressed"]

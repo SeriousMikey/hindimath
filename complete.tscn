@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv0xc5btb54pi"]
+
+[ext_resource type="Script" uid="uid://d3r5qb6qeg212" path="res://complete.gd" id="1_mq70s"]
+
+[node name="Complete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mq70s")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.955559, 0.937301, 0.898201, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="GoodJob" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.159722
+anchor_top = 0.271605
+anchor_right = 0.841146
+anchor_bottom = 0.600309
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "शाबाश! आपने हिंदी गणित पूरा कर लिया है!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.402778
+anchor_top = 0.62963
+anchor_right = 0.597222
+anchor_bottom = 0.740741
+offset_bottom = 3.05176e-05
+text = "रीस्टार्ट करें"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
